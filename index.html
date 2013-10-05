@@ -3,7 +3,7 @@
 		<style type="text/css">
 			body
 			{
-//				background-color: #;
+				background-image: url('img/greyzz.png');
 			}
 			div.info
 			{
@@ -29,6 +29,12 @@
 				height: 100%
 				display: table;
 				margin: 0 auto;
+			}
+			hr
+			{
+				color: #aaf;
+				background-color: #aaf;
+				height: 3px;
 			}
 			.container{
 				margin: 5px;
@@ -60,7 +66,7 @@
 	</head>
 	<body>
 		<center>
-		<img style="height: auto; width: 300px;" src="http://spunout.ie/images/SpunOut/Logos/SpunOut_ie.jpg">
+		<img style="height: auto; width: 300px;" src="img/SpunOut_ie.png">
 		</center>
 		<div class="outer">
 			<div class="info list" >
@@ -179,7 +185,27 @@
 
 			</div>
 			<div class="info map">
-				<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=53.014783,-7.338867&amp;spn=4.085313,10.821533&amp;t=m&amp;z=7&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/?ie=UTF8&amp;ll=53.014783,-7.338867&amp;spn=4.085313,10.821533&amp;t=m&amp;z=7&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+				<iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+					<div class="map">
+						    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+						    <script>
+							var map;
+
+							function initialize() {
+							  var mapOptions = {
+							    zoom: 8,
+							    center: new google.maps.LatLng(53.3478, -6.2597),
+							    mapTypeId: google.maps.MapTypeId.ROADMAP
+							  };
+							  map = new google.maps.Map(document.getElementById('map-canvas'),
+							      mapOptions);
+							}
+
+							google.maps.event.addDomListener(window, 'load', initialize);
+
+    						</script>
+				</iframe>
 			</div>
 		</div>
 	</body>
