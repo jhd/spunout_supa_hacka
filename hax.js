@@ -1,14 +1,9 @@
 
 
-function filter2list(f, locArray, bounds)
-{
-
-	function ffilter(bounds, loc)
-	{
-		//hax goes here
-	
-	}
-	var finalLocs = locArray.filter(f)
-	return finalLocs
-
+function withinBounds(sw, ne, location){
+    function f(elem){
+        return ((location.lat() > sw.lat() && location.lat() < ne.lat()) &&
+                (location.lng() > sw.lng() && location.lng() < ne.lng()))
+    }
+    return locArray.filter(f)
 }
