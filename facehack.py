@@ -2,10 +2,10 @@ import urllib2
 import json
 
 def searchByID(ID):
-    return json.load(urllib2.urlopen("htpp://http://178.79.168.249/service/:" + ID))   
+    return json.load(urllib2.urlopen("http://www.whoismytd.com/v1/service/:" + ID))   
 
 def searchByTag(tag):
-    return json.load(urllib2.urlopen("http://http://178.79.168.249/service/:" + tags))   
+    return json.load(urllib2.urlopen("http://www.whoismytd.com/v1/service/:" + tags))   
 
 def allData():
     return json.load(urllib2.urlopen("http://www.whoismytd.com/v1"))   
