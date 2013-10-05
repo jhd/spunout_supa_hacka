@@ -2,7 +2,16 @@ var events = {
     'bounds_changed': 'fired when the viewport bounds have changed.'
 };
 
-var markers;
+var markers, data = {};
+
+var client = new XMLHttpRequest();
+
+client.open('GET', 'dump.txt');
+client.onreadystatechange = function() {
+  data = client.responseText;
+}
+client.send();
+console.log(data)
 
 function withinBounds(map, locations) {
     var ne = map.getBounds().getNorthEast()
