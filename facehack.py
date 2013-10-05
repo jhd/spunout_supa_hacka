@@ -10,6 +10,9 @@ def searchByTag(tag):
 def allData():
     return json.load(urllib2.urlopen("http://www.whoismytd.com/v1"))   
 
+def getID(ID, data):
+    return data['services'][ID]['id']
+
 def getLatitude(ID, data):
     return data['services'][ID]['address']['latitude']
 
@@ -57,6 +60,7 @@ def getAddress(ID, data):
     return result
 allData = allData()
 
+print getID(0, allData)
 print getLatitude(0, allData)
 print getLongitude(0, allData)
 print getWebsite(0, allData)
