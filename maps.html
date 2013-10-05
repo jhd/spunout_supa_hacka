@@ -27,12 +27,74 @@
       }
       #events {
        overflow: hidden;
+
       }
+            body
+            {
+                background-image: url('img/greyzz.png');
+            }
+            div.info
+            {
+                float: left;
+                background-color: #A3C7CE;
+                display: inline;
+            }
+            div.list
+            {
+                width: 30%;
+                height: 85%;
+                overflow: scroll;
+                overflow-x:hidden;
+            }
+            div.map
+            {
+                width: 70%;
+                height: 85%;
+            }
+            div.outer
+            {
+                width: 60%;
+                height: 100%
+                display: table;
+                margin: 0 auto;
+            }
+            hr
+            {
+                color: #aaf;
+                background-color: #aaf;
+                height: 3px;
+            }
+            .container{
+                margin: 5px;
+            }
+            .extra{
+                background-color: #D3E4E7;
+            }
+            .item{
+                margin-bottom: -10px;
+            }
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+            }
+
+
     </style>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
     </script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/expand.js"></script>
     <script type="text/javascript">
+
       var events = {
         'bounds_changed': 'fired when the viewport bounds have changed.',
         'center_changed': 'fired when the map center property changes.',
@@ -102,7 +164,6 @@
         for (var i=0; i<markers.length; i++){
             content += '<tr><td>' + markers[i].toString() + '</td></tr>';
         }
-        console.log(content)
         eventsTable.innerHTML = content;
     }
       }
@@ -113,8 +174,9 @@
     </script>
   </head>
   <body>
-  <script type="text/javascript">
-      </script>
+  <center>
+        <img style="height: auto; width: 300px;" src="img/SpunOut_ie.png">
+        </center>
     <div id="main">
       <div id="map">
         <h2>
@@ -124,11 +186,121 @@
         </div>
       </div>
       <div id="events">
-        <h2>
-          Locations
-        </h2>
-        <table width="100%" id="service_descr">
-        </table>
+        <div class="info list" >
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+                <div class="container">
+                    <div class="item">
+                            NIAMH (Beacon) - Belfast - Willowtree<p />
+                    </div>
+                    <div class="extra" style="display:none">
+                        <img src="img/phone.png" width="20px" /> <a href="" >0044 028 90611197</a><p />
+                        <img src="img/link.png" width="20px" /> <a href="" >www.beaconwellbeing.org</a><p />
+                        <img src="img/email.png" width="20px" /> <a href="" >info@niamh.co.uk</a></p>
+                    </div>
+                    <hr />
+                </div>
+
+
+
+            </div>
       </div>
     </div>
     </div>
