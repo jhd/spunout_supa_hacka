@@ -16,7 +16,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
 var map;
-var lat, lon;
+
 function initialize() {
   var mapOptions = {
     zoom: 8,
@@ -29,12 +29,12 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
+// zoom and center
 google.maps.event.addListener(map, 'click', function(e) {
-    lat = e.latLng.lat();
-    lon = e.latLng.lat();
+    map.setZoom(map.getZoom()+1);
+    map.setCentre(e.LatLng);
   });
-
-
 
 
     </script>
