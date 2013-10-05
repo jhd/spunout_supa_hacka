@@ -84,3 +84,19 @@ function getAddress(id, data){
 
     return result
 }
+
+function makeDiv(id, data){
+
+    result = "<div class=\"container\"> <div class=\"item\">";
+    result = result + getTitle(id, data);
+    result = result + "</div><div class=\"extra\" style=\"display:none\">";
+    result = result + "<img src=\"img/phone.png\" width=\"20px\" /> <a href=\"\">" + getPhone(id, data);
+    result = result + "</a></p>";
+    result = result + "<img src=\"img/link.png\" width=\"20px\" /> <a href=\"\">" + getWebsite(id, data);
+    result = result + "</a></p>";
+    result = result + "<img src=\"img/email.png\" width=\"20px\" /> <a href=\"\">" + getEmail(id, data);
+    result = result + "</a></p>";
+    result = result + "</div></hr></div>"
+
+    return result;
+}
