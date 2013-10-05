@@ -1,9 +1,7 @@
-
-
 function withinBounds(sw, ne, location){
     function f(elem){
-        return ((location.lat() > sw.lat() && location.lat() < ne.lat()) &&
-                (location.lng() > sw.lng() && location.lng() < ne.lng()))
+        return ((elem.lat() > sw.lat() && elem.lat() < ne.lat()) &&
+                (elem.lng() > sw.lng() && elem.lng() < ne.lng()))
     }
     return locArray.filter(f)
 }
